@@ -36,12 +36,20 @@ function iswin(player, board, markedcell){
             let group = []
             w.forEach(c => {
                 let getMark = board[c].getAttribute('data-mark')
-                group.push(getMark === player.id)
+                group.push({
+                    cell:board[c],
+                    check:getMark === player.id
+                })
             })
 
-            if(group.every(current => current === true)){
+            if(group.every(current => current.check === true)){
                 player.score++
                 winner = true
+
+                group.forEach(obj => {
+                    obj.cell.classList.add('markedcell')
+                });
+
                 return
             }
         }
@@ -78,6 +86,7 @@ function resetgame(){
             state = true
             board.forEach(column => {
                 column.setAttribute('data-mark', '')
+                column.classList.remove('markedcell')
                 column.innerHTML = ''
             })
         })
