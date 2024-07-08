@@ -1,109 +1,107 @@
-:root{
-    --border: 3px solid black;
-}
-
-@font-face {
-    font-family: 'patua';
-    src: url(patua.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    font-family: 'patua','Courier New', Courier, monospace;
-    margin: 0;
+    font-family: 'Aleo', 'Courier New', Courier, monospace;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-html, body{
-    background-color: skyblue;
-    height: 100%;
+.d-none{
+    display: none !important;
 }
 
-main{
+.main{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: azure;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-#board{
-    width: 550px;
-    height: 550px;
-    padding: 40px;
-    background-color: white;
-    border-radius: 5px;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+}
+
+header img{
+    width: 70px;
+    margin-right: 10px;
+}
+
+header h1{
+    font-size: 22px;
+    color: purple;
+}
+
+header p{
+    font-size: 12px;
 }
 
 #placar{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    width: 360px;
+    font-size: 18px;
 }
 
-#placar h1 {
-    padding: 0;
-    margin: 0;
+#placar div{
+    padding: 25px;
 }
 
-#score{
+.tabuleiro{
+    width: 360px;
+    border: 1px solid purple;
+    background-color: white;
+}
+
+.row{
     display: flex;
-    flex-direction: row;
-}
-
-.score-count{
-    font-size: 1.4rem;
-}
-
-table{
     width: 100%;
-    height: 400px;
-    border: none;
+    height: 120px;
 }
 
-table td{
-    width: 33%;
-    height: 33%;
-    text-align: center;
-    vertical-align: middle;
-    justify-content: center;
-    font-size: 5rem;
+.col{
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid purple;
     cursor: pointer;
+    font-size: 110px;
+    text-align: center;
+    align-content: center;
 }
 
-table td:hover{
-    background-color: rgba(0, 255, 255, 0.397);
+.col:hover{
+    background-color: aqua;
+    color: black;
 }
 
-table tr:first-child{
-    border-bottom: var(--border);
-}
-
-table tr:last-child{
-    border-top: var(--border);
-}
-
-table td:first-child{
-    border-right: var(--border);
-}
-
-table td:last-child{
-    border-left: var(--border);
-}
-
-#reset{
-    width: 150px;
-    height: 60px;
+#btn_reset{
+    width: 360px;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
     margin-top: 30px;
-    border-radius: 5px;
-    background-color: bisque;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.markedcell{
-    background-color: rgb(0, 255, 200);
+#btn_reset:hover{
+    background-color: violet;
+    color: blueviolet;
 }
 
-@media (max-width:550px){
-    #board{
-        width: 100%;
-    }
+.winner{
+    background-color: blueviolet;
+    color: white;
 }
+

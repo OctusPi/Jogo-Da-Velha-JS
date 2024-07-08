@@ -4,45 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/jogo-da-velha.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <main>
-        <div id="board" class="mx-auto">
-            <div id="placar">
+    
+    <div class="main">
+        <header>
+            <img src="assets/jogo-da-velha.png">
+            <div>
                 <h1>Jogo da Velha</h1>
-                <div id="score" class="ms-auto">
-                    <div class="score-count me-4">
-                        X: <span id="score-x">00</span>
-                    </div>
-                    <div class="score-count">
-                        O: <span id="score-o">00</span>
-                    </div>
-                </div>
+                <p>Venha james, sirva o chá e vamos jogar! </p>
             </div>
-            <table>
-                <tr class="line">
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                </tr>
-                <tr class="line">
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                </tr>
-                <tr class="line">
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                    <td class="column" data-mark=""></td>
-                </tr>
-            </table>
-        </div>
-        <button id="reset" class="mx-auto">Reiniciar Game</button>
-    </main>
+        </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <div id="placar">
+            <div id="scorex">Player X : 00</div>
+            <div id="scoreo"> Player O : 00</div>
+        </div>
+
+        <div class="tabuleiro">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <button type="button" id="btn_reset" class="">Reiniciar Game</button>
+    </div>
+
     <script type="text/javascript" src="game.js"></script>
 </body>
 </html>
