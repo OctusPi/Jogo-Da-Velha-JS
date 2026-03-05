@@ -1,4 +1,2 @@
 # JogoDaVelha
-A simple game in JS
-
-Open file index.html in your favorite browser...
+Projeto para ensinar desenvolvimento Web aos alunos do ensino fundamental do município de Araripe - CE 
